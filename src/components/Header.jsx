@@ -24,7 +24,7 @@ function Header() {
 
   return (
     <>
-      <div className="hidden container mx-auto md:block bg-gradient-to-r from-greene to-greene1 w-full">
+      <div className=" container mx-auto md:block bg-gradient-to-r from-greene to-greene1 ">
         <ul className="flex text-white justify-around text-sm">
           <li>Onam sale offer. 30% off on honeymoon packages</li>
           <li>Onam sale offer. 30% off on honeymoon packages</li>
@@ -32,7 +32,7 @@ function Header() {
         </ul>
       </div>
 
-      <Navbar className="container mx-auto justify-between flex py-4 px-4 md:px-8">
+      <div className="container mx-auto justify-between flex py-4 px-4 md:px-8">
         <div className="flex items-center">
           <img alt="logo" src={logo} className="h-7 w-auto" />
         </div>
@@ -91,7 +91,8 @@ function Header() {
         >
           <span className="text-black text-sm">Sign in</span>
         </Button>
-      </Navbar>
+      </div>
+      <hr className="container mx-auto text-grey3" />
 
       {/* Mobile Hamburger Menu */}
       <button
@@ -118,7 +119,7 @@ function Header() {
         </div>
       )}
 
-      <Navbar className="container mx-auto flex flex-wrap justify-between items-center px-8 py-4">
+      <div className="container mx-auto flex flex-wrap justify-between items-center px-8 py-4">
         <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-10 gap-10 mt-4 md:mt-0">
           <div className="items-center">
             <img src={explore} alt="" />
@@ -156,8 +157,8 @@ function Header() {
             <img src={kochi} alt="" />
             <span className="text-black">Kochi</span>
           </div>
-          <div className="rounded border">
-            <i className="fa-solid fa-chevron-right text-black"></i>
+          <div className="rounded ">
+            <i className="fa-solid fa-chevron-right  text-black"></i>
           </div>
         </div>
 
@@ -186,7 +187,8 @@ function Header() {
             <i className="fa-solid fa-bars text-grey2"></i>
           </Button>
         </div>
-      </Navbar>
+      </div>
+      <hr className="container mx-auto text-grey3" />
     </>
   );
 }
