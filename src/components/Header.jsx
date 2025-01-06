@@ -12,13 +12,18 @@ import gate from "../assets/image/gate-india.png";
 
 function Header() {
   const [selected, setSelected] = useState("One");
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   const handleToggle = (value) => {
     setSelected(value);
   };
 
+  const toggleMenu = () => {
+    setIsMenuOpen(!isMenuOpen);
+  };
+
   return (
-    <>     
+    <>
       <div className="hidden container mx-auto md:block bg-gradient-to-r from-greene to-greene1 w-full">
         <ul className="flex text-white justify-around text-sm">
           <li>Onam sale offer. 30% off on honeymoon packages</li>
@@ -27,12 +32,12 @@ function Header() {
         </ul>
       </div>
 
-     
-      <Navbar className="container mx-auto justify-between flex flex-wrap py-4 px-4 md:px-8">
+      <Navbar className="container mx-auto justify-between flex py-4 px-4 md:px-8">
         <div className="flex items-center">
           <img alt="logo" src={logo} className="h-7 w-auto" />
         </div>
 
+        {/* Search Bar */}
         <div className="flex items-center w-full md:w-64 h-8 shadow-md rounded-full px-4 mt-2 md:mt-0">
           <svg
             xmlns="http://www.w3.org/2000/svg"
@@ -55,11 +60,13 @@ function Header() {
           />
         </div>
 
+        {/* Right Side Buttons */}
         <div className="hidden md:flex gap-10 text-grey">
           <a href="#">Honeymoon</a>
           <a href="#">Family</a>
         </div>
 
+        {/* Currency Dropdown */}
         <div className="mt-4 md:mt-0">
           <button className="rounded-full flex items-center h-8 border border-grey1 bg-white px-3">
             <div className="flex items-center text-grey1 space-x-2">
@@ -69,26 +76,54 @@ function Header() {
                 alt="India Flag"
               />
               <p className="text-sm">$ INR</p>
-              <p><i class="fa-solid fa-angle-down "></i></p>
+              <p>
+                <i className="fa-solid fa-angle-down "></i>
+              </p>
             </div>
           </button>
         </div>
 
+        {/* Sign-In Button */}
         <Button
           variant=""
           size="sm"
-          className="bg-green2 w-36  mt-4  md:mt-0 rounded-lg"
+          className="bg-green2 w-36 mt-4 md:mt-0 rounded-lg"
         >
           <span className="text-black text-sm">Sign in</span>
         </Button>
       </Navbar>
 
-      <Navbar className="container mx-auto flex flex-wrap justify-between items-center px-8 py-4">
-      <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-10 gap-10 mt-4 md:mt-0">
-        <div className=" items-center ">
-          <img src={explore} alt="" />
-          <span className="text-black">Explore</span>
+      {/* Mobile Hamburger Menu */}
+      <button
+        className="block md:hidden p-2"
+        onClick={toggleMenu}
+      >
+        <i className="fa-solid fa-bars text-black"></i>
+      </button>
+
+      {/* Mobile Menu Content */}
+      {isMenuOpen && (
+        <div className="block md:hidden container mx-auto py-4 bg-white shadow-md">
+          <div className="flex flex-col gap-4 text-center">
+            <a href="#">Honeymoon</a>
+            <a href="#">Family</a>
+            <Button
+              variant=""
+              size="sm"
+              className="bg-green2 w-36 mt-4 md:mt-0 rounded-lg"
+            >
+              <span className="text-black text-sm">Sign in</span>
+            </Button>
+          </div>
         </div>
+      )}
+
+      <Navbar className="container mx-auto flex flex-wrap justify-between items-center px-8 py-4">
+        <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-10 gap-10 mt-4 md:mt-0">
+          <div className="items-center">
+            <img src={explore} alt="" />
+            <span className="text-black">Explore</span>
+          </div>
           <div>
             <img src={taj} alt="" />
             <span className="text-black">Agra</span>
@@ -115,19 +150,19 @@ function Header() {
           </div>
           <div>
             <img src={goa} alt="" />
-            <span className='text-black' >Kerala</span>
+            <span className="text-black">Kerala</span>
           </div>
           <div>
             <img src={kochi} alt="" />
-            <span className='text-black' >Kochi</span>
+            <span className="text-black">Kochi</span>
           </div>
           <div className="rounded border">
-          <i class="fa-solid fa-chevron-right text-black"></i>
+            <i className="fa-solid fa-chevron-right text-black"></i>
           </div>
         </div>
 
         <div className="border border-grey3 rounded-md mt-4 md:mt-0">
-          <ButtonGroup className="bg-white rounded-md p-1 ">
+          <ButtonGroup className="bg-white rounded-md p-1">
             <Button
               onClick={() => handleToggle("One")}
               className={`rounded-md px-4 py-2 font-normal ${
@@ -138,7 +173,7 @@ function Header() {
             </Button>
             <Button
               onClick={() => handleToggle("Two")}
-              className={`rounded-md   font-normal ${
+              className={`rounded-md font-normal ${
                 selected === "Two" ? "bg-green2 text-white" : "bg-white text-grey2"
               }`}
             >
@@ -146,9 +181,9 @@ function Header() {
             </Button>
           </ButtonGroup>
         </div>
-        <div >
+        <div className="block ">
           <Button className="bg-white border border-grey3">
-          <i class="fa-solid fa-bars text-grey2 "></i>
+            <i className="fa-solid fa-bars text-grey2"></i>
           </Button>
         </div>
       </Navbar>
