@@ -121,7 +121,7 @@ function Header() {
 
       <div className="container mx-auto flex flex-wrap justify-between items-center px-8 py-4">
         <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-10 gap-10 mt-4 md:mt-0">
-          <div className="items-center">
+          <div className="items-center text-center">
             <img src={explore} alt="" />
             <span className="text-black">Explore</span>
           </div>
@@ -182,10 +182,8 @@ function Header() {
             </Button>
           </ButtonGroup>
         </div>
-        <div className="block ">
-          <Button className="bg-white border border-grey3">
-            <i className="fa-solid fa-bars text-grey2"></i>
-          </Button>
+        <div className="border border-grey3 w-3   py-2 pl-3 px-7 rounded ">
+        <i className="fa-solid fa-bars  text-grey2"></i>
         </div>
       </div>
       <hr className="container mx-auto text-grey3" />
