@@ -56,7 +56,8 @@ export default {
       'p31':'#1E2E29',
       'grey1':'#DBDBDB',
       'grey2':'#8E8E8E',
-      'mustard':'#FFBD12'
+      'mustard':'#FFBD12',
+      'grey3':'#D4D4D4',
      
 
     },
