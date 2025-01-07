@@ -58,12 +58,14 @@ export default {
       'grey2':'#8E8E8E',
       'mustard':'#FFBD12',
       'grey3':'#D4D4D4',
+      'transparent1':'#ECECEC',
      
 
     },
     fontFamily:{
-      arial: ['Arial', 'sans-serif'],
+      title: ['poppins', 'serif'],
     }
+    
   },
   plugins: [],
 };

@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { Navbar, ButtonGroup, Button } from "@material-tailwind/react";
+import { Navbar, ButtonGroup, Button ,IconButton } from "@material-tailwind/react";
 import logo from "../assets/image/campflyicon.png";
 import explore from "../assets/image/Vector.png";
 import taj from "../assets/image/taj-mahal.png";
@@ -24,7 +24,7 @@ function Header() {
 
   return (
     <>
-      <div className=" container mx-auto md:block bg-gradient-to-r from-greene to-greene1 ">
+      <div className=" container mx-auto font-title md:block bg-gradient-to-r from-greene to-greene1 ">
         <ul className="flex text-white justify-around text-sm">
           <li>Onam sale offer. 30% off on honeymoon packages</li>
           <li>Onam sale offer. 30% off on honeymoon packages</li>
@@ -32,7 +32,7 @@ function Header() {
         </ul>
       </div>
 
-      <div className="container mx-auto justify-between flex py-4 px-4 md:px-8">
+      <div className="container font-title mx-auto justify-between flex py-4 px-4 md:px-8">
         <div className="flex items-center">
           <img alt="logo" src={logo} className="h-7 w-auto" />
         </div>
@@ -119,11 +119,11 @@ function Header() {
         </div>
       )}
 
-      <div className="container mx-auto flex flex-wrap justify-between items-center px-8 py-4">
+      <div className="container font-title mx-auto flex flex-wrap justify-between items-center px-8 py-4">
         <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-10 gap-10 mt-4 md:mt-0">
           <div className="items-center text-center">
             <img src={explore} alt="" />
-            <span className="text-black">Explore</span>
+            <span className="text-green2  font-bold">Explore</span>
           </div>
           <div>
             <img src={taj} alt="" />
@@ -157,16 +157,22 @@ function Header() {
             <img src={kochi} alt="" />
             <span className="text-black">Kochi</span>
           </div>
-          <div className="rounded ">
-            <i className="fa-solid fa-chevron-right  text-black"></i>
+          <div className="rounded border-r-2 border-transparent1 ">
+          <IconButton
+                  variant="text"
+                  className="bg-transparent1 mt-1 rounded-full"
+                >
+                  <i class="fa-solid fa-angle-right"></i>
+                </IconButton>
           </div>
         </div>
+        
 
         <div className="border border-grey3 rounded-md mt-4 md:mt-0">
           <ButtonGroup className="bg-white rounded-md p-1">
             <Button
               onClick={() => handleToggle("One")}
-              className={`rounded-md px-4 py-2 font-normal ${
+              className={`rounded-md px-4 py-2  ${
                 selected === "One" ? "bg-green2 text-white" : "bg-white text-grey2"
               }`}
             >
@@ -174,7 +180,7 @@ function Header() {
             </Button>
             <Button
               onClick={() => handleToggle("Two")}
-              className={`rounded-md font-normal ${
+              className={`rounded-md  ${
                 selected === "Two" ? "bg-green2 text-white" : "bg-white text-grey2"
               }`}
             >

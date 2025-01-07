@@ -15,12 +15,12 @@ function Brows() {
       <br />
       <br />
       <br />
-      <div className="flex mt-6 px-4 container mx-auto font-bold text-xl justify-between items-center">
+      <div className="flex font-title mt-6 px-4 container mx-auto font-bold text-xl justify-between items-center">
         <div className="gateway-heading">Browse Packages by Theme</div>
       </div>
       <br />
  
-      <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-9 gap-6 container px-4 mx-auto mt-5">
+      <div className="grid grid-cols-2 font-title sm:grid-cols-3 lg:grid-cols-9 gap-6 container px-4 mx-auto mt-5">
 
         <div className="text-center">
           <img className="rounded-full w-32 h-32 mx-auto" src={image52} alt="Mountains" />

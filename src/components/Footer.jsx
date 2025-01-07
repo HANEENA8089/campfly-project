@@ -19,19 +19,19 @@ const currentYear = new Date().getFullYear();
  
 export function Footer() {
   return (
-    <footer className="container mt-16 mx-auto relative w-full">
-      <div className="mx-auto w-full max-w-7xl px-8">
+    <footer className="container font-title mt-16 mx-auto relative w-full">
+      <div className="mx-auto font-title w-full max-w-7xl px-8">
         <div className="grid grid-cols-1 justify-between gap-4 md:grid-cols-2">
           <Typography variant="h5" className="mb-6">
             <img src={logo} alt="" />
           </Typography>
-          <div className="grid grid-cols-3 justify-between gap-4">
+          <div className="grid grid-cols-3 font-title justify-between gap-4">
             {LINKS.map(({ title, items }) => (
               <ul key={title}>
                 <Typography
                   variant="small"
                   color="blue-gray"
-                  className="mb-3 font-medium opacity-40"
+                  className="mb-3 font-medium opacity-40 font-title"
                 >
                   {title}
                 </Typography>
@@ -41,7 +41,7 @@ export function Footer() {
                       as="a"
                       href="#"
                       color="gray"
-                      className="py-1.5 font-normal transition-colors hover:text-blue-gray-900"
+                      className="py-1.5 font-normal font-title transition-colors hover:text-blue-gray-900"
                     >
                       {link}
                     </Typography>
@@ -51,10 +51,10 @@ export function Footer() {
             ))}
           </div>
         </div>
-        <div className="mt-12 flex w-full flex-col items-center justify-center border-t border-blue-gray-50 py-4 md:flex-row md:justify-between">
+        <div className="mt-12 font-title flex w-full flex-col items-center justify-center border-t border-blue-gray-50 py-4 md:flex-row md:justify-between">
           <Typography
             variant="small"
-            className="mb-4 text-center font-normal text-blue-gray-900 md:mb-0"
+            className="mb-4 text-center font-title font-normal text-blue-gray-900 md:mb-0"
           >
             &copy; {currentYear} <a href="https://material-tailwind.com/">Campfly</a>. All
             Rights Reserved.

@@ -12,6 +12,8 @@ import {
   import image44 from '../assets/image/image 44.png'
   import image39 from '../assets/image/image 39.png'
   import image43 from '../assets/image/image 43.png'
+  import rectangle from '../assets/image/Rectangle.png'
+
 
 
 function Honeymoon() {
@@ -19,7 +21,7 @@ function Honeymoon() {
     <>
     <br />
     <br />
-   <div className="container mx-auto px-4">
+   <div className="container font-title mx-auto px-4">
     
         <div className="flex flex-col sm:flex-row mt-16 justify-between items-center sm:px- px-4 font-bold text-xl">
           <div className="gateway-heading">Honeymoon Packages</div>
@@ -52,9 +54,12 @@ function Honeymoon() {
                   className="h-full w-full object-cover"
                 />
               </Carousel>
-              <div className="absolute top-0 left-0 bg-mustard text-black text-xs px-5 py-3 rounded-br-lg">
-                Member Price <br />
-                Available
+              <div className=" text-black ">
+              <img className="absolute top-0 left-0" src={rectangle} alt="" />
+              <div className="absolute top-0 left-0 text-xs mt-2 ml-2 text-center">
+              Member Price <br />
+              Available
+              </div>
               </div>
               <div className="absolute top-0 right-0 px-4 py-4">
                 <IconButton
@@ -68,7 +73,7 @@ function Honeymoon() {
             <CardBody>
               <Typography
                 variant="h7"
-                className="font-medium tracking-tight mb-2"
+                className="font-medium tracking-tight mb-2 font-title"
               >
                 Ladakh Adventure Expedition With Turtuk Village
               </Typography>
@@ -126,9 +131,12 @@ function Honeymoon() {
                   className="h-full w-full object-cover"
                 />
               </Carousel>
-              <div className="absolute top-0 left-0 bg-mustard text-black text-xs px-5 py-3 rounded-br-lg">
-                Member Price <br />
-                Available
+              <div className=" text-black ">
+              <img className="absolute top-0 left-0" src={rectangle} alt="" />
+              <div className="absolute top-0 left-0 text-xs mt-2 ml-2 text-center">
+              Member Price <br />
+              Available
+              </div>
               </div>
               <div className="absolute top-0 right-0 px-4 py-4">
                 <IconButton
@@ -142,7 +150,7 @@ function Honeymoon() {
             <CardBody>
               <Typography
                 variant="h7"
-                className="font-medium tracking-tight mb-2"
+                className="font-medium tracking-tight mb-2 font-title"
               >
                 Ladakh Adventure Expedition With Turtuk Village
               </Typography>
@@ -201,9 +209,12 @@ function Honeymoon() {
                   className="h-full w-full object-cover"
                 />
               </Carousel>
-              <div className="absolute top-0 left-0 bg-mustard text-black text-xs px-5 py-3 rounded-br-lg">
-                Member Price <br />
-                Available
+              <div className=" text-black ">
+              <img className="absolute top-0 left-0" src={rectangle} alt="" />
+              <div className="absolute top-0 left-0 text-xs mt-2 ml-2 text-center">
+              Member Price <br />
+              Available
+              </div>
               </div>
               <div className="absolute top-0 right-0 px-4 py-4">
                 <IconButton
@@ -217,7 +228,7 @@ function Honeymoon() {
             <CardBody>
               <Typography
                 variant="h7"
-                className="font-medium tracking-tight mb-2"
+                className="font-medium tracking-tight mb-2 font-title"
               >
                 Ladakh Adventure Expedition With Turtuk Village
               </Typography>
